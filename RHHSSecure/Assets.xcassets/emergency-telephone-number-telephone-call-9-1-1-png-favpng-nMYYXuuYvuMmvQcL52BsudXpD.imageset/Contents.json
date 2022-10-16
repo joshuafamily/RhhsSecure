@@ -1,7 +1,6 @@
 {
   "images" : [
     {
-      "filename" : "emergency-telephone-number-telephone-call-9-1-1-png-favpng-nMYYXuuYvuMmvQcL52BsudXpD.jpeg",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -10,6 +9,7 @@
       "scale" : "2x"
     },
     {
+      "filename" : "emergency-telephone-number-telephone-call-9-1-1-png-favpng-nMYYXuuYvuMmvQcL52BsudXpD.jpeg",
       "idiom" : "universal",
       "scale" : "3x"
     }
