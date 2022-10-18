@@ -17,35 +17,41 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="River_Hill__MD__Hawks_Logo" translatesAutoresizingMaskIntoConstraints="NO" id="KSW-Nh-99o">
-                                <rect key="frame" x="-412" y="30" width="1240" height="388"/>
+                                <rect key="frame" x="-412" y="30" width="1240" height="374"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XCq-pW-RBk">
-                                <rect key="frame" x="20" y="488" width="376" height="23"/>
+                                <rect key="frame" x="20" y="474" width="376" height="30"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email         " textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nl1-gD-Tpc">
-                                        <rect key="frame" x="0.0" y="0.0" width="88.5" height="23"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="88.5" height="30"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please enter your email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0de-fy-zZn">
-                                        <rect key="frame" x="88.5" y="0.0" width="287.5" height="23"/>
+                                        <rect key="frame" x="88.5" y="0.0" width="287.5" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="8R0-nR-VsV"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sV1-f2-CcB">
-                                <rect key="frame" x="20" y="531" width="376" height="23"/>
+                                <rect key="frame" x="20" y="524" width="376" height="30"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L1i-P2-2KZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="88.5" height="23"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="88.5" height="30"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please enter your password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="apN-pt-ViD">
-                                        <rect key="frame" x="88.5" y="0.0" width="287.5" height="23"/>
+                                        <rect key="frame" x="88.5" y="0.0" width="287.5" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="drE-ta-yEg"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
@@ -62,7 +68,7 @@
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Register" cornerStyle="medium">
-                                            <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="22"/>
                                             <color key="baseForegroundColor" systemColor="systemGray6Color"/>
                                         </buttonConfiguration>
                                     </button>
@@ -74,7 +80,7 @@
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Login">
-                                            <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="22"/>
                                             <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
                                         </buttonConfiguration>
                                         <connections>
@@ -110,6 +116,7 @@
                     <connections>
                         <outlet property="emailField" destination="0de-fy-zZn" id="lxI-Ub-Htb"/>
                         <outlet property="pwdField" destination="apN-pt-ViD" id="wXq-9D-nXw"/>
+                        <segue destination="lZX-dW-EIx" kind="show" id="x25-f9-Peo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -160,13 +167,13 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="140" id="HyN-n2-pcS"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1yP-N1-bjm" customClass="RoundBtn" customModule="RHHSSecure" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1yP-N1-bjm">
                                 <rect key="frame" x="59" y="182" width="285" height="270"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="270" id="Xiu-pc-cJQ"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="emergency-telephone-number-telephone-call-9-1-1-png-favpng-nMYYXuuYvuMmvQcL52BsudXpD"/>
+                                <buttonConfiguration key="configuration" style="plain" image="call button x3"/>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="R1f-tk-82A"/>
@@ -388,11 +395,11 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="hW7-QD-D0y"/>
+        <segue reference="x25-f9-Peo"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="River_Hill__MD__Hawks_Logo" width="1240" height="1240"/>
-        <image name="emergency-telephone-number-telephone-call-9-1-1-png-favpng-nMYYXuuYvuMmvQcL52BsudXpD" width="273.33334350585938" height="285.66665649414062"/>
+        <image name="call button x3" width="273.33334350585938" height="285.66665649414062"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

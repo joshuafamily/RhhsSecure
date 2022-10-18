@@ -23,7 +23,7 @@ class Login: UIViewController {
 
     @IBAction func signinTapped(_ sender: Any) {
         if let email = emailField.text, let pwd = pwdField.text{
-            if email == "eric@google.com" {
+            if (email == "eric@google.com" && pwd == "123456") {
                 
             }
         }
