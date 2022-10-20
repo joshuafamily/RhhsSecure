@@ -21,10 +21,12 @@ class Login: UIViewController {
     }
 
 
-    @IBAction func signinTapped(_ sender: Any) {
+    @IBAction func signinTapped(_ sender: AnyObject) {
         if let email = emailField.text, let pwd = pwdField.text{
+            //let email = "eric@google.com"
+            //let pwd = "123456"
             if (email == "eric@google.com" && pwd == "123456") {
-                
+                performSegue(withIdentifier: "goToMain",sender: nil)
             }
         }
     }
