@@ -22,8 +22,14 @@ class MainCall: UIViewController {
     @IBAction func LogoutClicked(_ sender: RoundBtn) {
         performSegue(withIdentifier: "goToLogin", sender: nil)
     }
+    
+    @IBAction func MakeCall(_ sender: UIButton) {
+        
+    }
+    
     /*
-    // MARK: - Navigation
+     
+     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
