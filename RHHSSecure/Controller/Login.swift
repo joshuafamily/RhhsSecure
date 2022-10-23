@@ -17,6 +17,7 @@ class Login: UIViewController {
     @IBOutlet weak var pwdField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        //RoundImage.image = UIImage(named:"River_Hill__MD__Hawks_Logo")
         // Do any additional setup after loading the view.
     }
 

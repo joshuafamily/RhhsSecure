@@ -6,14 +6,24 @@
 //
 
 import UIKit
+import MessageUI
 
-class MainCall: UIViewController {
+class MainCall: UIViewController, MFMessageComposeViewControllerDelegate {
+    func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        //dispose of any resources that can be recreated
+    }
+    
     
     @IBAction func ConfClicked(_ sender: RoundBtn) {
         performSegue(withIdentifier: "goToAB", sender: nil)
@@ -24,9 +34,27 @@ class MainCall: UIViewController {
     }
     
     @IBAction func MakeCall(_ sender: UIButton) {
-        
+        displayMessageInterface()
     }
     
+    
+    func displayMessageInterface(){
+        let composeVC = MFMessageComposeViewController()
+        composeVC.messageComposeDelegate = self
+        
+        //configure the field
+        composeVC.recipients=["8618601702885"]
+        composeVC.recipients?.append("8615895492805")
+        
+        composeVC.body = "test SMS by Dad"
+        
+        if MFMessageComposeViewController.canSendText(){
+            self.present(composeVC,animated:true, completion:nil)
+        }else{
+            print("can`t send message")
+        }
+    }
+
     /*
      
      // MARK: - Navigation
